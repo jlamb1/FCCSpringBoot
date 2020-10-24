@@ -19,11 +19,11 @@ load("@maven//:defs.bzl", "pinned_maven_install")
 
 pinned_maven_install()
 
-BUILDTOOLS_TAG = "3.2.0"
+BUILDTOOLS_TAG = "3.5.0"
 
 http_archive(
     name = "com_github_bazelbuild_buildtools",
-    sha256 = "55095ba38ab866166052d7e99a5ff237797cf86de4481f07d7f43540e79641df",
+    sha256 = "f5b666935a827bc2b6e2ca86ea56c796d47f2821c2ff30452d270e51c2a49708",
     strip_prefix = "buildtools-%s" % BUILDTOOLS_TAG,
     url = "https://github.com/bazelbuild/buildtools/archive/%s.zip" % BUILDTOOLS_TAG,
 )
