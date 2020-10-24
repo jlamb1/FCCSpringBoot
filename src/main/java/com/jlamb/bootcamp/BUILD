@@ -2,7 +2,10 @@ load("@rules_java//java:defs.bzl", "java_binary", "java_library")
 
 java_library(
     name = "lib",
-    srcs = glob(["*.java", "**/*.java"]),
+    srcs = glob([
+        "*.java",
+        "**/*.java",
+    ]),
     visibility = ["//src/test:__subpackages__"],
     deps = [
         "@maven//:com_fasterxml_jackson_core_jackson_annotations",
