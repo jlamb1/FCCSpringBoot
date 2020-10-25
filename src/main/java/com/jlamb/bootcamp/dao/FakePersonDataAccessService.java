@@ -3,6 +3,7 @@ package com.jlamb.bootcamp.dao;
 import com.jlamb.bootcamp.model.Person;
 import org.springframework.stereotype.Repository;
 
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +15,7 @@ public class FakePersonDataAccessService implements PersonDAO {
     private static List<Person> DB = new ArrayList<>();
 
     @Override
-    public int insertPerson(UUID id, Person person) {
+    public int insertPerson(UUID id, @NotNull Person person) {
         DB.add(new Person(id, person.getName()));
         return 1;
     }
