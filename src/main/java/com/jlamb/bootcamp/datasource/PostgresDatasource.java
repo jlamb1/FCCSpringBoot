@@ -16,6 +16,8 @@ public class PostgresDatasource {
         return DataSourceBuilder
                 .create()
                 .type(HikariDataSource.class)
+                .url("jdbc:postgresql://localhost:5432/demodb")
+                .username("postgres")
                 .password("password") // TODO: fix
                 .build();
     }
