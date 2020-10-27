@@ -1,8 +1,10 @@
+---
 app:
   datasource:
-    jdbc-url: jdbc:postgresql://localhost:5432/demodb
-    username: postgres
-    passord: password
+    jdbc-url: "jdbc:postgresql://localhost:5432/demodb"
+    password: password
     poll-size: 30
+    username: postgres
+debug: true
 flyway:
   baselineOnMigrate: true
