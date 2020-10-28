@@ -3,10 +3,13 @@ package com.jlamb.bootcamp.api;
 import com.jlamb.bootcamp.model.Person;
 import com.jlamb.bootcamp.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,7 +30,14 @@ public class PersonController {
     }
 
     @GetMapping
-    public List<Person> getAllPeople() {
+    public List<Person> getAllPeople(Model model, HttpSession session) {
+        @SuppressWarnings("unchecked")
+        List<String> messages = (List<String>) session.getAttribute("MY_SESSION_MESSAGES");
+        if (messages == null) {
+            messages = new ArrayList<>();
+        }
+        model.addAttribute("sessionMessages", messages);
+        model.addAttribute("sessionId", session.getId());
         return personService.getAllPeople();
     }
 

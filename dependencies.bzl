@@ -15,6 +15,12 @@ def maven_dependencies():
             "org.flywaydb:flyway-core:7.0.4",
             "com.zaxxer:HikariCP:3.4.5",
             "org.springframework:spring-jdbc:5.2.9.RELEASE",
+            "org.springframework.session:spring-session-core:2.4.0-RC1",
+            "org.springframework.session:spring-session-data-redis:2.4.0-RC1",
+            "org.springframework.session:spring-session-jdbc:2.4.0-RC1",
+            "org.springframework.session:spring-session-hazelcast:2.4.0-RC1",
+            "org.springframework.boot:spring-boot-starter-data-redis:2.4.0-M4",
+            "javax.servlet:javax.servlet-api:4.0.1",
         ],
         repositories = [
             "https://jcenter.bintray.com/",

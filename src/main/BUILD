@@ -25,6 +25,12 @@ java_library(
         "@maven//:org_springframework_spring_context",
         "@maven//:org_springframework_spring_jdbc",
         "@maven//:org_springframework_spring_web",
+        "@maven//:org_springframework_session_spring_session_core",
+        "@maven//:org_springframework_session_spring_session_data_redis",
+        "@maven//:org_springframework_session_spring_session_jdbc",
+        "@maven//:org_springframework_session_spring_session_hazelcast",
+        "@maven//:javax_servlet_javax_servlet_api",
+        "@maven//:org_springframework_boot_spring_boot_starter_data_redis",
     ],
 )
 
